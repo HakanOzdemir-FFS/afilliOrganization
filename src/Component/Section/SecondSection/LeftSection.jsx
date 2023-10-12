@@ -10,7 +10,7 @@ const LeftSection = () => {
         <video
           data-test="video-content"
           preload="auto"
-          src="https://cdn.dribbble.com/userupload/9657100/file/original-7f701e4c0142c56371ec75a7c2ed1d2b.mp4"
+          src="https://cdn.dribbble.com/userupload/10691034/file/original-cda0560e9424609120d7f2f274bf6ceb.mp4"
           playsinline="true"
           loop="loop"
           draggable="false"

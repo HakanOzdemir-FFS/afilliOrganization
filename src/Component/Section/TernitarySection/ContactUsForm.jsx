@@ -39,7 +39,7 @@ const ContactUsForm = () => {
       id="contact"
       className="container mx-auto px-8 py-12 flex flex-col mt-10 bg-primary-dark-color-1 rounded-2xl z-0"
     >
-      <div className="flex">
+      <div className="flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 p-4 flex flex-col justify-center text-white mb-4 md:mb-0">
           <h2 className="text-xl font-semibold mb-4">Bize Ulaşın</h2>
           <form>
