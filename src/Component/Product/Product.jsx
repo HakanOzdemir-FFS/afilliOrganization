@@ -5,25 +5,31 @@ import { images } from "./ImagesArray";
 
 const ImageGallery = () => {
   const [hoverIndex, setHoverIndex] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" ? window.innerWidth <= 768 : false
+  );
+
   const [popupOpen, setPopupOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [clickCount, setClickCount] = useState(0);
 
   const handleResize = useCallback(() => {
-    setIsMobile(window.innerWidth <= 768);
-    if (!isMobile) {
-      setClickCount(0);
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth <= 768);
+      if (!isMobile) {
+        setClickCount(0);
+      }
     }
   }, [isMobile]);
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, [handleResize]);
-
   return (
     <div
       id="hizmetlerimiz"

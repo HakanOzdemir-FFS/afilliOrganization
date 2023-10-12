@@ -6,7 +6,11 @@ import ReactDOM from "react-dom";
 import Logo from "./Logo";
 
 const Navbar = () => {
-  const mobileMenuElement = document.getElementById("mobile-menu");
+  let mobileMenuElement;
+  if (typeof document !== "undefined") {
+    mobileMenuElement = document.getElementById("mobile-menu");
+  }
+
   const [openMenu, setOpenMenu] = useState(false);
   const [animation, setAnimation] = useState("");
 
