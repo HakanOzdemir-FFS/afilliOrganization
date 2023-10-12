@@ -7,7 +7,6 @@ const FixedSocialBar = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setVisible(true);
-      console.log("göründü");
     }, 30000);
 
     return () => clearTimeout(timer);

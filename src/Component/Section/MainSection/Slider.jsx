@@ -17,7 +17,7 @@ const Slider = () => {
   ];
 
   return (
-    <div className="lg:hidden mt-32 rounded-lg w-[90%] mx-auto bg-primary-light-color-2 bg-opacity-10">
+    <div className="lg:hidden mt-40 rounded-lg w-[90%] mx-auto bg-primary-light-color-2 bg-opacity-10">
       <Slide
         prevArrow={<React.Fragment />}
         nextArrow={<React.Fragment />}

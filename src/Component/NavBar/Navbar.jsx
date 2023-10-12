@@ -48,19 +48,14 @@ const Navbar = () => {
     <React.Fragment>
       {openMenu && mobileMenu}
 
-      <nav className="fixed top-0 left-0  right-0 bg-primary-dark-color-1 p-4 shadow-md z-40">
+      <nav className="fixed top-0 left-0  right-0 bg-black p-4 shadow-md z-40">
         <div className="container mx-auto flex items-center justify-between ">
-          <div className="text-white font-bold text-xl">
-            <button>
-              <Logo />
-            </button>
-          </div>
-
+          <Logo />
           <div className="flex items-center self-center">
             <ul className="space-x-4 hidden lg:flex">
               <li
                 onClick={goToTop}
-                className="text-white hover:text-blue-300 transition ease-in-out duration-300 text-lg cursor-pointer"
+                className="text-white hover:text-yellow-300 transition ease-in-out duration-300 text-lg cursor-pointer"
               >
                 Ana Sayfa
               </li>
@@ -69,7 +64,7 @@ const Navbar = () => {
                   to="hizmetlerimiz"
                   smooth={true}
                   duration={0}
-                  className="text-white hover:text-blue-300 transition ease-in-out duration-300 text-lg cursor-pointer"
+                  className="text-white hover:text-yellow-300 transition ease-in-out duration-300 text-lg cursor-pointer"
                 >
                   Hizmetler
                 </Link>
@@ -79,7 +74,7 @@ const Navbar = () => {
                   to="hakkimizda"
                   smooth={true}
                   duration={0}
-                  className="text-white hover:text-blue-300 transition cursor-pointer ease-in-out duration-300 text-lg"
+                  className="text-white hover:text-yellow-300 transition cursor-pointer ease-in-out duration-300 text-lg"
                 >
                   Hakkımızda
                 </Link>
@@ -89,14 +84,14 @@ const Navbar = () => {
                   to="how-to"
                   smooth={true}
                   duration={0}
-                  className="text-white hover:text-blue-300 transition cursor-pointer ease-in-out duration-300 text-lg"
+                  className="text-white hover:text-yellow-300 transition cursor-pointer ease-in-out duration-300 text-lg"
                 >
                   Nasıl Çalışır
                 </Link>
               </li>
 
               <li>
-                <button className="text-white hover:text-blue-300 transition ease-in-out duration-300 text-lg">
+                <button className="text-white hover:text-yellow-300 transition ease-in-out duration-300 text-lg">
                   <Link to="contact" smooth={true} duration={0}>
                     İletişim
                   </Link>

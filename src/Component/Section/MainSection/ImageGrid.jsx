@@ -25,7 +25,7 @@ const ImageGrid = () => {
   };
 
   return (
-    <div className="hidden lg:flex mt-32 mx-auto w-[95%] overflow-x-hidden rounded-lg">
+    <div className="hidden lg:flex mt-36 mx-auto w-[95%] overflow-x-hidden rounded-lg">
       {images.map((image, index) => (
         <div
           key={index}
