@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import ImageItem from "./ImageItem";
 import ProductItemPopup from "./ProductItemPopup";
 import { images } from "./ImagesArray";
@@ -10,19 +10,19 @@ const ImageGallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [clickCount, setClickCount] = useState(0);
 
-  const handleResize = () => {
+  const handleResize = useCallback(() => {
     setIsMobile(window.innerWidth <= 768);
     if (!isMobile) {
       setClickCount(0);
     }
-  };
+  }, [isMobile]);
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [handleResize]);
 
   return (
     <div

@@ -16,7 +16,7 @@ const customIcon = new L.Icon({
 });
 
 const MapClickHandler = ({ lat, lng }) => {
-  const map = useMapEvents({
+  useMapEvents({
     click: () => {
       window.open(
         `https://www.google.com/maps/place/Afilli+Organizasyon/@36.962254,30.7063985,15z/data=!4m2!3m1!1s0x0:0xb43f780d118be7ec?sa=X&ved=2ahUKEwi1s5Kz-O6BAxXlQvEDHXKIDp8Q_BJ6BAg9EAA&ved=2ahUKEwi1s5Kz-O6BAxXlQvEDHXKIDp8Q_BJ6BAhKEAg`,
